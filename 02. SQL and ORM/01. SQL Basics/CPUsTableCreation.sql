@@ -1,0 +1,24 @@
+USE [ComponentsDatabase]
+GO
+
+/****** Object:  Table [dbo].[CPUs]    Script Date: 13/11/2021 15:05:01 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CPUs](
+	[ID] [int] IDENTITY (1, 1) NOT NULL,
+	[Make] [nchar](255) NOT NULL,
+	[Model] [nchar](255) NOT NULL,
+	[Frequency] [float] NOT NULL,
+	[CoreNumber] [int] NOT NULL,
+ CONSTRAINT [PK_CPUs] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
